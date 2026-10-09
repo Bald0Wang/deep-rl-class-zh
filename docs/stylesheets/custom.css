@@ -1,0 +1,194 @@
+/* ============================================================
+   Deep RL 课程中文版 · 橘白清爽主题
+   设计原则:白底为主,橘色仅用于品牌强调与交互反馈;
+   正文深灰(#1E293B)保证 ≥4.5:1 对比度;过渡 150–300ms。
+   ============================================================ */
+
+/* ---------- 浅色模式(default)---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ea580c;            /* 品牌橘:导航高亮、主按钮 */
+  --md-primary-fg-color--light: #fdba74;
+  --md-primary-fg-color--dark: #c2410c;
+  --md-accent-fg-color: #ea580c;             /* hover / 搜索高亮 */
+  --md-typeset-a-color: #c2410c;             /* 正文链接,白底对比度 ≈ 5.9:1 */
+  --md-default-bg-color: #ffffff;
+  --md-code-bg-color: #fff7ed;               /* 代码块:淡橘底 */
+  --md-footer-bg-color: #ffffff;
+  --md-footer-fg-color: #475569;
+}
+
+/* ---------- 深色模式(slate):同款橘色点缀 ---------- */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fdba74;
+  --md-primary-fg-color--dark: #ea580c;
+  --md-accent-fg-color: #fb923c;
+  --md-typeset-a-color: #fb923c;
+}
+
+/* ---------- 顶栏:白色玻璃 + 橘色 logo(仅浅色)---------- */
+[data-md-color-scheme="default"] .md-header {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #1e293b;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+[data-md-color-scheme="default"] .md-header .md-header__title,
+[data-md-color-scheme="default"] .md-header .md-header__topic {
+  color: #0f172a;
+}
+
+[data-md-color-scheme="default"] .md-header .md-header__button {
+  color: #475569;
+}
+
+[data-md-color-scheme="default"] .md-header .md-logo svg,
+[data-md-color-scheme="default"] .md-header .md-icon svg {
+  fill: #ea580c;
+}
+
+[data-md-color-scheme="default"] .md-search__form {
+  background-color: rgba(15, 23, 42, 0.06);
+}
+
+[data-md-color-scheme="default"] .md-search__form:hover {
+  background-color: rgba(15, 23, 42, 0.1);
+}
+
+[data-md-color-scheme="default"] .md-search__icon {
+  color: #475569;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: rgba(30, 30, 36, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- 侧边导航:当前页橘色加粗 ---------- */
+[data-md-color-scheme="default"] .md-sidebar--primary .md-nav__link--active {
+  color: #c2410c;
+  font-weight: 600;
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  transition: color 200ms ease;
+}
+
+/* ---------- 正文排版 ---------- */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset {
+  line-height: 1.7;
+}
+
+[data-md-color-scheme="default"] .md-typeset h2 {
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.md-typeset a {
+  transition: color 200ms ease;
+}
+
+.md-typeset ::selection {
+  background-color: #ffedd5;
+}
+
+/* 标题锚点(¶)使用橘色 */
+.md-typeset .headerlink {
+  color: #fdba74;
+}
+
+.md-typeset .headerlink:hover {
+  color: #ea580c;
+}
+
+/* ---------- 首页卡片与按钮 ---------- */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid #f1f5f9;
+  transition: border-color 200ms ease, box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: #fdba74;
+  box-shadow: 0 6px 24px rgba(249, 115, 22, 0.12);
+  transform: translateY(-2px);
+}
+
+.md-button {
+  transition: background-color 200ms ease, border-color 200ms ease,
+    color 200ms ease, box-shadow 200ms ease;
+}
+
+[data-md-color-scheme="default"] .md-button--primary {
+  background-color: #ea580c;
+  border-color: #ea580c;
+  color: #ffffff;
+  box-shadow: 0 2px 12px rgba(234, 88, 12, 0.28);
+}
+
+[data-md-color-scheme="default"] .md-button--primary:hover,
+[data-md-color-scheme="default"] .md-button--primary:focus-visible {
+  background-color: #c2410c;
+  border-color: #c2410c;
+  color: #ffffff;
+}
+
+/* ---------- 提示框(tip)呼应橘色 ---------- */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  --md-admonition-fg-color: #c2410c;
+  --md-admonition-bg-color: rgba(249, 115, 22, 0.06);
+}
+
+/* ---------- 测验折叠块:橘色描边 ---------- */
+[data-md-color-scheme="default"] .md-typeset details {
+  border-color: #fed7aa;
+}
+
+[data-md-color-scheme="default"] .md-typeset details[open] > summary {
+  border-bottom-color: #fed7aa;
+}
+
+.md-typeset summary:hover {
+  color: #c2410c;
+}
+
+/* ---------- 页脚 ---------- */
+[data-md-color-scheme="default"] .md-footer {
+  background-color: #ffffff;
+  color: #475569;
+  border-top: 1px solid #f1f5f9;
+}
+
+[data-md-color-scheme="default"] .md-footer .md-footer-link,
+[data-md-color-scheme="default"] .md-copyright {
+  color: #64748b;
+}
+
+/* ---------- 返回顶部 ---------- */
+.md-top {
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+[data-md-color-scheme="default"] .md-top:hover {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+
+/* ---------- 动效偏好:跟随系统减弱 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .grid.cards > ul > li,
+  .md-button,
+  .md-typeset a,
+  .md-top {
+    transition: none !important;
+  }
+}

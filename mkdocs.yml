@@ -1,5 +1,5 @@
 site_name: Deep RL 课程中文版(deep-rl-class-zh)
-site_description: deep-rl-class 的中文版本课程 — Hugging Face Deep Reinforcement Learning Course 简体中文翻译
+site_description: deep-rl-class 的中文版本课程 — Hugging Face 深度强化学习课程全 114 页简体中文翻译(9 个正式单元 + 3 个附加单元),在线阅读:https://bald0wang.github.io/deep-rl-class-zh/
 site_author: Bald0Wang
 site_url: https://bald0wang.github.io/deep-rl-class-zh/
 repo_url: https://github.com/Bald0Wang/deep-rl-class-zh
@@ -58,6 +58,9 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/custom.css
 
 nav:
   - 首页: index.md
