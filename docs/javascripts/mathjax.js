@@ -6,8 +6,9 @@ window.MathJax = {
     processEnvironments: true
   },
   options: {
-    ignoreHtmlClass: ".*|tex2jax_ignore",
-    processHtmlClass: "tex2jax_process"
+    // 忽略所有元素,只处理 arithmatex 包裹的公式(pymdownx.arithmatex generic 输出)
+    ignoreHtmlClass: ".*",
+    processHtmlClass: "arithmatex"
   }
 };
 

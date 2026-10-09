@@ -20,29 +20,29 @@
 
 这就是 Actor-Critic 背后的思想。我们要学习两个函数逼近(function approximation):
 
-- *策略*,**控制智能体(agent)的行动方式**: \\( \pi_{\theta}(s) \\)
+- *策略*,**控制智能体(agent)的行动方式**: \( \pi_{\theta}(s) \)
 
-- *价值函数(value function)*,通过衡量所采取动作的好坏来辅助策略更新: \\( \hat{q}_{w}(s,a) \\)
+- *价值函数(value function)*,通过衡量所采取动作的好坏来辅助策略更新: \( \hat{q}_{w}(s,a) \)
 
 ## Actor-Critic 的过程
 看完 Actor-Critic 的整体图景之后,让我们深入了解一下:在训练过程中,演员和评论家是如何共同改进的。
 
 如前所述,Actor-Critic 方法中有两个函数逼近(两个神经网络):
-- *演员*,一个以 theta 为参数的**策略函数**: \\( \pi_{\theta}(s) \\)
-- *评论家*,一个以 w 为参数的**价值函数**: \\( \hat{q}_{w}(s,a) \\)
+- *演员*,一个以 theta 为参数的**策略函数**: \( \pi_{\theta}(s) \)
+- *评论家*,一个以 w 为参数的**价值函数**: \( \hat{q}_{w}(s,a) \)
 
 让我们通过训练流程来理解演员和评论家是如何被优化的:
-- 在每个时间步(timestep)t,我们从环境中获得当前状态 \\( S_t\\),并**把它作为输入传给我们的演员和评论家**。
+- 在每个时间步(timestep)t,我们从环境中获得当前状态 \( S_t\),并**把它作为输入传给我们的演员和评论家**。
 
-- 我们的策略接收该状态并**输出一个动作** \\( A_t \\)。
+- 我们的策略接收该状态并**输出一个动作** \( A_t \)。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit8/step1.jpg" alt="Actor Critic 第 1 步"/>
 
-- 评论家同时把该动作也作为输入,利用 \\( S_t\\) 和 \\( A_t \\),**计算出在该状态下采取该动作的价值:即 Q 值(Q-value)**。
+- 评论家同时把该动作也作为输入,利用 \( S_t\) 和 \( A_t \),**计算出在该状态下采取该动作的价值:即 Q 值(Q-value)**。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit8/step2.jpg" alt="Actor Critic 第 2 步"/>
 
-- 在环境中执行动作 \\( A_t\\) 后,会输出一个新状态 \\( S_{t+1}\\) 和一个奖励 \\( R_{t+1} \\)。
+- 在环境中执行动作 \( A_t\) 后,会输出一个新状态 \( S_{t+1}\) 和一个奖励 \( R_{t+1} \)。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit8/step3.jpg" alt="Actor Critic 第 3 步"/>
 
@@ -50,7 +50,7 @@
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit8/step4.jpg" alt="Actor Critic 第 4 步"/>
 
-- 得益于更新后的参数,演员根据新状态 \\( S_{t+1} \\) 产生下一个要执行的动作 \\( A_{t+1} \\)。
+- 得益于更新后的参数,演员根据新状态 \( S_{t+1} \) 产生下一个要执行的动作 \( A_{t+1} \)。
 
 - 随后,评论家更新自己的价值参数。
 
@@ -69,6 +69,6 @@
 - 如果 A(s,a) > 0:梯度就会**朝这个方向推进**。
 - 如果 A(s,a) < 0(我们的动作比该状态的平均值表现得更差),**梯度就会朝相反的方向推进**。
 
-实现这个优势函数的问题在于,它需要两个价值函数—— \\( Q(s,a)\\) 和 \\( V(s)\\)。幸运的是,**我们可以用 TD 误差(TD error)作为优势函数的优良估计器**。
+实现这个优势函数的问题在于,它需要两个价值函数—— \( Q(s,a)\) 和 \( V(s)\)。幸运的是,**我们可以用 TD 误差(TD error)作为优势函数的优良估计器**。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit8/advantage2.jpg" alt="优势函数"/>

@@ -16,4 +16,4 @@
   <figcaption>图片修改自 <a href="https://jonathan-hui.medium.com/rl-proximal-policy-optimization-ppo-explained-77f014ec3f12">RL — Proximal Policy Optimization (PPO) 详解,作者 Jonathan Hui</a></figcaption>
 </figure>
 
-**因此在 PPO 中,我们以保守的方式更新策略**。为此,我们需要通过在当前策略与旧策略之间计算一个比率,来衡量当前策略相对旧策略改变了多少。然后,我们把这个比率裁剪到范围 \\( [1 - \epsilon, 1 + \epsilon] \\) 内,这意味着我们**消除了当前策略过度偏离旧策略的激励("近端/proximal"一词由此而来)。**
+**因此在 PPO 中,我们以保守的方式更新策略**。为此,我们需要通过在当前策略与旧策略之间计算一个比率,来衡量当前策略相对旧策略改变了多少。然后,我们把这个比率裁剪到范围 \( [1 - \epsilon, 1 + \epsilon] \) 内,这意味着我们**消除了当前策略过度偏离旧策略的激励("近端/proximal"一词由此而来)。**

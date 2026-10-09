@@ -9,16 +9,16 @@
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/bellman.jpg" alt="贝尔曼方程"/>
 
-根据到目前为止所学的内容,我们知道:如果要计算 \\(V(S_t)\\)(某个状态(state)的价值),就需要计算从该状态出发、之后一直遵循策略(policy)所能得到的回报(return)。**(在下面的例子中,我们定义的策略是贪心策略(Greedy Policy);为了简化,我们不对奖励(reward)做折扣)。**
+根据到目前为止所学的内容,我们知道:如果要计算 \(V(S_t)\)(某个状态(state)的价值),就需要计算从该状态出发、之后一直遵循策略(policy)所能得到的回报(return)。**(在下面的例子中,我们定义的策略是贪心策略(Greedy Policy);为了简化,我们不对奖励(reward)做折扣)。**
 
-所以,要计算 \\(V(S_t)\\),我们需要计算期望奖励之和。于是:
+所以,要计算 \(V(S_t)\),我们需要计算期望奖励之和。于是:
 
 <figure>
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/bellman2.jpg" alt="贝尔曼方程"/>
   <figcaption>计算状态 1 的价值:智能体(agent)从该状态出发,在所有时间步都遵循贪心策略(采取能到达最优状态值的动作)时的奖励总和。</figcaption>
 </figure>
 
-接着,要计算 \\(V(S_{t+1})\\),我们需要计算从状态 \\(S_{t+1}\\) 出发的回报。
+接着,要计算 \(V(S_{t+1})\),我们需要计算从状态 \(S_{t+1}\) 出发的回报。
 
 <figure>
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/bellman3.jpg" alt="贝尔曼方程"/>
@@ -31,7 +31,7 @@
 
 贝尔曼方程是一个递归方程,它的思路是这样的:对每个状态,我们不必从头开始计算回报,而是可以把任意状态的价值看作:
 
-**即时奖励 \\(R_{t+1}\\) + 之后那个状态的折扣价值( \\(\gamma * V(S_{t+1}) \\) )。**
+**即时奖励 \(R_{t+1}\) + 之后那个状态的折扣价值( \(\gamma * V(S_{t+1}) \) )。**
 
 <figure>
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/bellman4.jpg" alt="贝尔曼方程"/>
@@ -45,7 +45,7 @@
 
 计算状态 1 的价值:即**智能体从状态 1 出发**,之后在所有时间步都遵循**策略**时的奖励总和。
 
-这等价于 \\(V(S_{t})\\) = 即时奖励 \\(R_{t+1}\\) + 下一状态的折扣价值 \\(\gamma * V(S_{t+1})\\)
+这等价于 \(V(S_{t})\) = 即时奖励 \(R_{t+1}\) + 下一状态的折扣价值 \(\gamma * V(S_{t+1})\)
 
 <figure>
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/bellman6.jpg" alt="贝尔曼方程"/>
@@ -55,7 +55,7 @@
 为了简单起见,这里我们不做折扣,所以 gamma = 1。
 但在本单元的 Q-Learning 一节中,你会看到一个 gamma = 0.99 的例子。
 
-- \\(V(S_{t+1}) \\) 的价值 = 即时奖励 \\(R_{t+2}\\) + 下一状态的折扣价值( \\(gamma * V(S_{t+2})\\) )。
+- \(V(S_{t+1}) \) 的价值 = 即时奖励 \(R_{t+2}\) + 下一状态的折扣价值( \(gamma * V(S_{t+2})\) )。
 - 以此类推。
 
 

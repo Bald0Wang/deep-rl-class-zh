@@ -15,7 +15,7 @@
 更新价值函数的方法有两种:
 
 - 使用*蒙特卡洛方法*时,我们基于一个完整回合来更新价值函数,因此**使用的是该回合实际的折扣回报。**
-- 使用*时序差分学习方法*时,我们基于一步来更新价值函数,用**一个称为 TD 目标(TD target)的估计回报**来代替未知的 \\(G_t\\)。
+- 使用*时序差分学习方法*时,我们基于一步来更新价值函数,用**一个称为 TD 目标(TD target)的估计回报**来代替未知的 \(G_t\)。
 
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/summary-learning-mtds.jpg" alt="总结"/>

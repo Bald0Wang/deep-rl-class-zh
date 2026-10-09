@@ -104,22 +104,22 @@ epsilon-贪婪策略(epsilon-greedy strategy)是一种处理探索与利用权�
 
 请记住,在时序差分学习中,我们在**一步交互之后**就会更新策略或价值函数(具体取决于我们选择的强化学习方法)。
 
-为了构造 TD 目标,**我们使用即时奖励 \\(R_{t+1}\\) 加上下一个状态的折扣价值**,后者通过找出在下一状态下使当前 Q 函数最大化的动作来计算。(我们称之为自举,bootstrap)。
+为了构造 TD 目标,**我们使用即时奖励 \(R_{t+1}\) 加上下一个状态的折扣价值**,后者通过找出在下一状态下使当前 Q 函数最大化的动作来计算。(我们称之为自举,bootstrap)。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/Q-learning-7.jpg" alt="Q-learning"/>
 
-因此,我们的 \\(Q(S_t, A_t)\\) **更新公式如下:**
+因此,我们的 \(Q(S_t, A_t)\) **更新公式如下:**
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/Q-learning-8.jpg" alt="Q-learning"/>
 
 
-这意味着,要更新 \\(Q(S_t, A_t)\\):
+这意味着,要更新 \(Q(S_t, A_t)\):
 
-- 我们需要 \\(S_t, A_t, R_{t+1}, S_{t+1}\\)。
+- 我们需要 \(S_t, A_t, R_{t+1}, S_{t+1}\)。
 - 要更新某个状态-动作对上的 Q 值,我们使用 TD 目标。
 
 TD 目标是如何构造的?
-1. 执行动作 \\(A_t\\) 之后,我们获得奖励 \\(R_{t+1}\\)。
+1. 执行动作 \(A_t\) 之后,我们获得奖励 \(R_{t+1}\)。
 2. 为了得到下一状态的**最优状态-动作对价值**,我们使用贪婪策略(greedy policy)来选择下一个最佳动作。注意,这不是 epsilon-贪婪策略——贪婪策略总是选取状态-动作价值最高的动作。
 
 当这个 Q 值更新完成后,我们进入一个新状态,并**再次使用 epsilon-贪婪策略**来选择动作。

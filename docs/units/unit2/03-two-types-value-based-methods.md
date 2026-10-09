@@ -65,7 +65,7 @@
 
 在动作价值函数中,对每一个状态-动作对,动作价值函数**输出的都是期望回报**:即智能体从该状态出发、采取该动作,之后一直遵循该策略所能得到的回报。
 
-在策略 \\(π\\) 下,在状态 \\(s\\) 采取动作 \\(a\\) 的价值是:
+在策略 \(π\) 下,在状态 \(s\) 采取动作 \(a\) 的价值是:
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/action-state-value-function-1.jpg" alt="动作状态价值函数"/>
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/action-state-value-function-2.jpg" alt="动作状态价值函数"/>
@@ -73,8 +73,8 @@
 
 可以看到,区别在于:
 
-- 对于状态价值函数,我们计算的是**某个状态 \\(S_t\\) 的价值**
-- 对于动作价值函数,我们计算的是**状态-动作对( \\(S_t, A_t\\) )的价值,也就是在该状态下采取该动作的价值。**
+- 对于状态价值函数,我们计算的是**某个状态 \(S_t\) 的价值**
+- 对于动作价值函数,我们计算的是**状态-动作对( \(S_t, A_t\) )的价值,也就是在该状态下采取该动作的价值。**
 
 <figure>
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/two-types.jpg" alt="两种价值函数"/>

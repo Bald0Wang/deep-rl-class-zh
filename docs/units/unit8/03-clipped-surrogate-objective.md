@@ -29,12 +29,12 @@
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit9/ratio2.jpg" alt="比率"/>
 
-它就是:在当前策略下,于状态 \\( s_t \\) 处采取动作 \\( a_t \\) 的概率,除以上一个策略在相同情况下的概率。
+它就是:在当前策略下,于状态 \( s_t \) 处采取动作 \( a_t \) 的概率,除以上一个策略在相同情况下的概率。
 
-可以看到,\\( r_t(\theta) \\) 表示当前策略与旧策略之间的概率比率(probability ratio):
+可以看到,\( r_t(\theta) \) 表示当前策略与旧策略之间的概率比率(probability ratio):
 
-- 如果 \\( r_t(\theta) > 1 \\),说明**在当前策略下,于状态 \\( s_t \\) 处采取动作 \\( a_t \\) 的可能性比旧策略更大。**
-- 如果 \\( r_t(\theta) \\) 介于 0 和 1 之间,说明**当前策略采取该动作的可能性比旧策略更低**。
+- 如果 \( r_t(\theta) > 1 \),说明**在当前策略下,于状态 \( s_t \) 处采取动作 \( a_t \) 的可能性比旧策略更大。**
+- 如果 \( r_t(\theta) \) 介于 0 和 1 之间,说明**当前策略采取该动作的可能性比旧策略更低**。
 
 因此,这个概率比率是**一种估计旧策略与当前策略之间差异的简便方法。**
 
@@ -64,9 +64,9 @@
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit9/clipped.jpg" alt="PPO"/>
 
-这个裁剪部分是 \\( r_t(\theta) \\) 被裁剪在 \\( [1 - \epsilon, 1 + \epsilon] \\) 之间的版本。
+这个裁剪部分是 \( r_t(\theta) \) 被裁剪在 \( [1 - \epsilon, 1 + \epsilon] \) 之间的版本。
 
-有了裁剪代理目标函数,我们就有两个概率比率:一个未裁剪,另一个被裁剪在 \\( [1 - \epsilon, 1 + \epsilon] \\) 范围内。epsilon 是一个超参数,帮助我们定义这个裁剪范围(论文中 \\( \epsilon = 0.2 \\))。
+有了裁剪代理目标函数,我们就有两个概率比率:一个未裁剪,另一个被裁剪在 \( [1 - \epsilon, 1 + \epsilon] \) 范围内。epsilon 是一个超参数,帮助我们定义这个裁剪范围(论文中 \( \epsilon = 0.2 \))。
 
 然后,我们取裁剪后目标与未裁剪目标二者中的最小值,**因此最终目标是未裁剪目标的一个下界(悲观界)。**
 

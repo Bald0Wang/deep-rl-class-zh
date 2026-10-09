@@ -386,11 +386,11 @@ class Policy(nn.Module):
 
 - 我们想最大化效用函数 $J(\theta)$,但在 PyTorch 和 TensorFlow 中,**最小化一个目标函数**更方便。
     - 假设我们想在某个时间步强化动作 3。训练之前,这个动作的概率 P 是 0.25。
-    - 于是我们想调整 \\(theta \\),使得 \\(\pi_\theta(a_3|s; \theta) > 0.25 \\)
-    - 由于所有概率 P 之和必须为 1,最大化 \\(pi_\theta(a_3|s; \theta)\\) 就会**最小化其他动作的概率**。
-    - 所以我们应该告诉 PyTorch **去最小化 \\(1 - \pi_\theta(a_3|s; \theta)\\)**。
-    - 当 \\(\pi_\theta(a_3|s; \theta)\\) 接近 1 时,这个损失函数趋近于 0。
-    - 这样我们就在引导梯度去最大化 \\(\pi_\theta(a_3|s; \theta)\\)
+    - 于是我们想调整 \(theta \),使得 \(\pi_\theta(a_3|s; \theta) > 0.25 \)
+    - 由于所有概率 P 之和必须为 1,最大化 \(pi_\theta(a_3|s; \theta)\) 就会**最小化其他动作的概率**。
+    - 所以我们应该告诉 PyTorch **去最小化 \(1 - \pi_\theta(a_3|s; \theta)\)**。
+    - 当 \(\pi_\theta(a_3|s; \theta)\) 接近 1 时,这个损失函数趋近于 0。
+    - 这样我们就在引导梯度去最大化 \(\pi_\theta(a_3|s; \theta)\)
 
 
 ```python

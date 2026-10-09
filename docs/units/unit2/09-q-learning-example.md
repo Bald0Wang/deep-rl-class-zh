@@ -48,7 +48,7 @@
 
 ## 第 3 步:执行动作 At,得到 Rt+1 和 St+1
 
-向右走之后,我得到了一小块奶酪,所以 \\(R_{t+1} = 1\\),并且我进入了一个新状态。
+向右走之后,我得到了一小块奶酪,所以 \(R_{t+1} = 1\),并且我进入了一个新状态。
 
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/q-ex-4.jpg" alt="Maze-Example"/>
@@ -56,7 +56,7 @@
 
 ## 第 4 步:更新 Q(St, At)
 
-现在我们可以用公式来更新 \\(Q(S_t, A_t)\\) 了。
+现在我们可以用公式来更新 \(Q(S_t, A_t)\) 了。
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/q-ex-5.jpg" alt="Maze-Example"/>
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/Example-4.jpg" alt="Maze-Example"/>
@@ -74,7 +74,7 @@
 
 ## 第 3 步:执行动作 At,得到 Rt+1 和 St+1
 
-因为吃了毒药,**我得到 \\(R_{t+1} = -10\\),然后我就死了。**
+因为吃了毒药,**我得到 \(R_{t+1} = -10\),然后我就死了。**
 
 <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/unit3/q-ex-7.jpg" alt="Maze-Example"/>
 
