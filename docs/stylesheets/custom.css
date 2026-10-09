@@ -238,8 +238,15 @@
   color: #7c2d12;
 }
 
-.md-typeset .hero p {
+[data-md-color-scheme="default"] .md-typeset .hero p {
   color: #431407;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .hero p {
+  color: #fcd9b6;
+}
+
+.md-typeset .hero p {
   max-width: 46em;
   margin-left: auto;
   margin-right: auto;
