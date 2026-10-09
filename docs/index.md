@@ -26,7 +26,7 @@ hide:
 
 1. 先阅读 [Unit 0 · 欢迎来到课程](units/unit0/01-introduction.md) 与 [环境配置](units/unit0/02-setup.md);
 2. 按下方卡片顺序学习:每个单元先读理论页,再到「动手实践」页进入 Colab 运行代码;
-3. 原版 Colab 笔记本在官方仓库 [notebooks/](https://github.com/huggingface/deep-rl-class/tree/main/notebooks) 目录,可直接运行。
+3. 配套代码在仓库 [notebooks/](https://github.com/Bald0Wang/deep-rl-class-zh/tree/main/notebooks) 目录:Markdown 说明与代码注释均为中文,代码与官方逐字一致;也可直接使用官方 Colab 版在线运行。
 
 每个单元约需 1 周、每周 3–4 小时;左侧边栏点击章节标题可折叠/展开,右上角 🌓 切换深浅色。
 

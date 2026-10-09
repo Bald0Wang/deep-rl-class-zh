@@ -30,7 +30,7 @@
 
 1. 先阅读 [Unit 0 · 欢迎来到课程](./docs/units/unit0/01-introduction.md) 与 [环境配置](./docs/units/unit0/02-setup.md);
 2. 按下方目录顺序学习,每个单元先读理论页,再到**动手实践**页进入 Colab 运行代码;
-3. 原版 Colab 笔记本在官方仓库 [notebooks/](https://github.com/huggingface/deep-rl-class/tree/main/notebooks) 目录(代码无需翻译,直接运行即可)。
+3. 配套代码在本仓库 [notebooks/](./notebooks/) 目录 —— **Markdown 说明与代码注释均为中文**(代码与官方逐字一致);也可直接使用[官方 Colab 版](https://github.com/huggingface/deep-rl-class/tree/main/notebooks)在线运行。
 
 ## 课程目录
 
@@ -222,6 +222,21 @@
 | 01 | [恭喜结课 🎉](./docs/appendix/01-congratulations.md) |
 | 02 | [获取结业证书](./docs/appendix/02-certification.md) |
 | 03 | [直播 1:课程工作机制、问答、与 Huggy 一起玩 🐶](./docs/appendix/03-live1.md) |
+
+## 配套代码(中文注释版) 📓
+
+官方课程的 Colab 笔记本已收录在本仓库 [notebooks/](./notebooks/) 目录:Markdown 说明单元格与代码注释均已译为中文,代码本身与官方原版逐字一致(经 token 级校验)。各笔记本对应的单元与内容简介见 [notebooks/README.md](./notebooks/README.md)。
+
+| 笔记本 | 内容 |
+|--------|------|
+| [unit1](./notebooks/unit1/unit1.ipynb) | Stable-Baselines3 训练月球着陆器 + 上传 Hub |
+| [unit2](./notebooks/unit2/unit2.ipynb) | 从零实现 Q-Learning(FrozenLake、Taxi) |
+| [unit3](./notebooks/unit3/unit3.ipynb) | RL Baselines3 Zoo 训练太空侵略者 DQN |
+| [unit4](./notebooks/unit4/unit4.ipynb) | PyTorch 从零实现 REINFORCE |
+| [unit5](./notebooks/unit5/unit5.ipynb) | ML-Agents 训练雪球靶 |
+| [unit6](./notebooks/unit6/unit6.ipynb) | Panda-Gym 训练 A2C 机械臂 |
+| [unit8](./notebooks/unit8/) | CleanRL PPO;Sample Factory + Doom(两部分) |
+| [bonus-unit1](./notebooks/bonus-unit1/) | 训练机器狗 Huggy |
 
 ## 术语对照表
 
