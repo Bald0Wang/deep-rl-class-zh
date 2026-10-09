@@ -4,20 +4,23 @@ hide:
   - toc
 ---
 
+<div class="hero" markdown="1">
+
 # 深度强化学习课程 · 中文版 🤗
+
+**deep-rl-class 的中文版本课程** — 基于 [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course) 官方源码逐页翻译,9 个正式单元 + 3 个附加单元共 114 页全覆盖:从强化学习基础、Q-Learning、DQN,到策略梯度、PPO、多智能体与 RLHF。
+
+[ :material-rocket-launch: 开始学习 Unit 0](units/unit0/01-introduction.md){: .md-button .md-button--primary }
+[ :material-table-of-contents: 浏览课程目录](#课程单元){: .md-button }
+[ :material-github: GitHub 仓库](https://github.com/Bald0Wang/deep-rl-class-zh){: .md-button }
+
+</div>
 
 <p align="center">
   <img src="https://huggingface.co/datasets/huggingface-deep-rl-course/course-images/resolve/main/en/notebooks/deep-rl-course-illustration.jpg" alt="Deep RL 课程插画" style="max-width: 720px; width: 100%;">
 </p>
 
-本站是 [Hugging Face Deep Reinforcement Learning Course](https://huggingface.co/learn/deep-rl-course) 的中文版本课程,基于官方源码仓库 [huggingface/deep-rl-class](https://github.com/huggingface/deep-rl-class)(Apache-2.0)翻译而成,译文由 AI 辅助生成,仅供学习交流。
-
 深度强化学习(Deep RL)是人工智能中最迷人的领域之一:AlphaGo、Atari 游戏、机器人控制、大模型对齐(RLHF)背后都有它的身影。课程特点是**理论 + 实战结合**:每个单元先讲透一个核心算法,再用 Google Colab 笔记本动手训练智能体,并把训练成果上传到 Hugging Face Hub 与全球学习者互相评分。完成全部单元还可获得[结业证书](appendix/02-certification.md)。
-
-<p style="text-align: center; margin: 1.8em 0;" markdown="1">
-[ :material-rocket-launch: 开始学习 Unit 0](units/unit0/01-introduction.md){: .md-button .md-button--primary }
-[ :material-table-of-contents: 浏览课程目录](#课程单元){: .md-button }
-</p>
 
 ## 如何使用本课程
 
@@ -25,7 +28,7 @@ hide:
 2. 按下方卡片顺序学习:每个单元先读理论页,再到「动手实践」页进入 Colab 运行代码;
 3. 原版 Colab 笔记本在官方仓库 [notebooks/](https://github.com/huggingface/deep-rl-class/tree/main/notebooks) 目录,可直接运行。
 
-每个单元约需 1 周、每周 3–4 小时;左侧边栏可跳转任意页面,右上角 🌓 切换深浅色。
+每个单元约需 1 周、每周 3–4 小时;左侧边栏点击章节标题可折叠/展开,右上角 🌓 切换深浅色。
 
 ## 课程单元
 

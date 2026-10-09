@@ -221,3 +221,98 @@
     transition: none !important;
   }
 }
+
+/* ---------- 首页 Hero ---------- */
+.md-typeset .hero {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%);
+  border: 1px solid #fed7aa;
+  border-radius: 24px;
+  padding: 2.4rem 2rem 2.6rem;
+  text-align: center;
+  margin: 1.2rem 0 2rem;
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.10);
+}
+
+.md-typeset .hero h1 {
+  margin-top: 0;
+  color: #7c2d12;
+}
+
+.md-typeset .hero p {
+  color: #431407;
+  max-width: 46em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .hero {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.14) 0%, rgba(234, 88, 12, 0.22) 100%);
+  border-color: rgba(253, 186, 116, 0.25);
+  box-shadow: none;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .hero h1 {
+  color: #fdba74;
+}
+
+/* ---------- 卡片:圆角 + 图标橘色 ---------- */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 16px;
+}
+
+.md-typeset .grid.cards > ul > li .twemoji svg,
+.md-typeset .grid.cards > ul > li svg {
+  color: #ea580c;
+}
+
+/* ---------- 代码块与行内代码 ---------- */
+.md-typeset pre {
+  border-radius: 12px;
+}
+
+.md-typeset pre > code {
+  border-radius: 12px;
+}
+
+[data-md-color-scheme="default"] .md-typeset pre {
+  border: 1px solid #ffedd5;
+}
+
+.md-typeset code {
+  border-radius: 6px;
+}
+
+/* ---------- 表格 ---------- */
+.md-typeset table:not([class]) {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background-color: #fff7ed;
+  color: #7c2d12;
+}
+
+/* ---------- 面包屑与导航 ---------- */
+.md-typeset .md-path__title {
+  color: #c2410c;
+}
+
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdba74;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

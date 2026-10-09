@@ -15,12 +15,20 @@ theme:
     logo: material/school
   features:
     - content.code.copy
+    - content.code.select
+    - content.tooltips
+    - header.autohide
     - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.prune
     - navigation.sections
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
+    - search.suggest
     - toc.follow
   palette:
     - scheme: default
