@@ -14,7 +14,7 @@ hide:
 
 深度强化学习(Deep RL)是人工智能中最迷人的领域之一:AlphaGo、Atari 游戏、机器人控制、大模型对齐(RLHF)背后都有它的身影。课程特点是**理论 + 实战结合**:每个单元先讲透一个核心算法,再用 Google Colab 笔记本动手训练智能体,并把训练成果上传到 Hugging Face Hub 与全球学习者互相评分。完成全部单元还可获得[结业证书](appendix/02-certification.md)。
 
-<p style="text-align: center; margin: 1.8em 0;">
+<p style="text-align: center; margin: 1.8em 0;" markdown="1">
 [ :material-rocket-launch: 开始学习 Unit 0](units/unit0/01-introduction.md){: .md-button .md-button--primary }
 [ :material-table-of-contents: 浏览课程目录](#课程单元){: .md-button }
 </p>
