@@ -1,0 +1,192 @@
+site_name: Deep RL 课程中文版(deep-rl-class-zh)
+site_description: deep-rl-class 的中文版本课程 — Hugging Face Deep Reinforcement Learning Course 简体中文翻译
+site_author: Bald0Wang
+site_url: https://bald0wang.github.io/deep-rl-class-zh/
+repo_url: https://github.com/Bald0Wang/deep-rl-class-zh
+repo_name: Bald0Wang/deep-rl-class-zh
+edit_uri: ""
+copyright: 原课程 © Hugging Face(Apache-2.0)· 译文由 AI 辅助生成,仅供学习交流
+
+theme:
+  name: material
+  language: zh
+  font: false
+  icon:
+    logo: material/school
+  features:
+    - content.code.copy
+    - navigation.footer
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 跟随系统
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: 深色模式
+
+plugins:
+  - search:
+      lang: zh
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: index.md
+  - "Unit 0 · 欢迎来到课程":
+      - "欢迎来到课程 🤗": units/unit0/01-introduction.md
+      - "环境配置(Setup)": units/unit0/02-setup.md
+      - "Discord 入门": units/unit0/03-discord101.md
+  - "Unit 1 · 深度强化学习入门":
+      - "引言": units/unit1/01-introduction.md
+      - "什么是强化学习?": units/unit1/02-what-is-rl.md
+      - "强化学习框架": units/unit1/03-rl-framework.md
+      - "任务的类型": units/unit1/04-tasks.md
+      - "探索与利用的权衡": units/unit1/05-exp-exp-tradeoff.md
+      - "解决 RL 问题的两大方法": units/unit1/06-two-methods.md
+      - "深度强化学习中的「深度」": units/unit1/07-deep-rl.md
+      - "本章小结": units/unit1/08-summary.md
+      - "术语表": units/unit1/09-glossary.md
+      - "动手实践:训练你的第一个深度强化学习智能体 🤖": units/unit1/10-hands-on.md
+      - "测验": units/unit1/11-quiz.md
+      - "结语": units/unit1/12-conclusion.md
+      - "延伸阅读": units/unit1/13-additional-readings.md
+  - "Bonus Unit 1 · 和机器狗 Huggy 一起入门深度强化学习":
+      - "引言": units/unitbonus1/01-introduction.md
+      - "Huggy 是如何工作的?": units/unitbonus1/02-how-huggy-works.md
+      - "训练 Huggy": units/unitbonus1/03-train.md
+      - "和 Huggy 一起玩": units/unitbonus1/04-play.md
+      - "结语": units/unitbonus1/05-conclusion.md
+  - "Unit 2 · Q-Learning 入门":
+      - "引言": units/unit2/01-introduction.md
+      - "什么是强化学习?简要回顾": units/unit2/02-what-is-rl.md
+      - "两种基于价值的方法": units/unit2/03-two-types-value-based-methods.md
+      - "贝尔曼方程:简化价值估计": units/unit2/04-bellman-equation.md
+      - "蒙特卡洛与时序差分学习": units/unit2/05-mc-vs-td.md
+      - "阶段小结": units/unit2/06-mid-way-recap.md
+      - "阶段测验": units/unit2/07-mid-way-quiz.md
+      - "认识 Q-Learning": units/unit2/08-q-learning.md
+      - "一个 Q-Learning 的例子": units/unit2/09-q-learning-example.md
+      - "Q-Learning 回顾": units/unit2/10-q-learning-recap.md
+      - "术语表": units/unit2/11-glossary.md
+      - "动手实践:用 Q-Learning 玩 FrozenLake ⛄ 和 Taxi 🚕": units/unit2/12-hands-on.md
+      - "Q-Learning 测验": units/unit2/13-quiz2.md
+      - "结语": units/unit2/14-conclusion.md
+      - "延伸阅读": units/unit2/15-additional-readings.md
+  - "Unit 3 · 用 Atari 游戏学 Deep Q-Learning":
+      - "引言": units/unit3/01-introduction.md
+      - "从 Q-Learning 到 Deep Q-Learning": units/unit3/02-from-q-to-dqn.md
+      - "深度 Q 网络(DQN)": units/unit3/03-deep-q-network.md
+      - "Deep Q 算法": units/unit3/04-deep-q-algorithm.md
+      - "术语表": units/unit3/05-glossary.md
+      - "动手实践:用 RL Baselines3 Zoo 在 Atari 游戏 👾 上训练 DQN": units/unit3/06-hands-on.md
+      - "测验": units/unit3/07-quiz.md
+      - "结语": units/unit3/08-conclusion.md
+      - "延伸阅读": units/unit3/09-additional-readings.md
+  - "Bonus Unit 2 · 用 Optuna 自动超参数调优":
+      - "引言": units/unitbonus2/01-introduction.md
+      - "Optuna": units/unitbonus2/02-optuna.md
+      - "动手实践": units/unitbonus2/03-hands-on.md
+  - "Unit 4 · 用 PyTorch 实现策略梯度(Policy Gradient)":
+      - "引言": units/unit4/01-introduction.md
+      - "什么是策略方法?": units/unit4/02-what-are-policy-based-methods.md
+      - "策略梯度方法的优缺点": units/unit4/03-advantages-disadvantages.md
+      - "深入理解策略梯度": units/unit4/04-policy-gradient.md
+      - "(可选)策略梯度定理": units/unit4/05-pg-theorem.md
+      - "术语表": units/unit4/06-glossary.md
+      - "动手实践:用 PyTorch 编写 Reinforce 并测试鲁棒性 💪": units/unit4/07-hands-on.md
+      - "测验": units/unit4/08-quiz.md
+      - "结语": units/unit4/09-conclusion.md
+      - "延伸阅读": units/unit4/10-additional-readings.md
+  - "Unit 5 · Unity ML-Agents 入门":
+      - "引言": units/unit5/01-introduction.md
+      - "ML-Agents 是如何工作的?": units/unit5/02-how-mlagents-works.md
+      - "SnowballTarget 环境": units/unit5/03-snowball-target.md
+      - "Pyramids 环境": units/unit5/04-pyramids.md
+      - "(可选)什么是深度强化学习中的好奇心?": units/unit5/05-curiosity.md
+      - "动手实践:ML-Agents 入门,训练雪球智能体": units/unit5/06-hands-on.md
+      - "附加内容:用 Unity 和 ML-Agents 创建你自己的环境": units/unit5/07-bonus.md
+      - "测验": units/unit5/08-quiz.md
+      - "结语": units/unit5/09-conclusion.md
+  - "Unit 6 · Actor-Critic 方法与机器人环境":
+      - "引言": units/unit6/01-introduction.md
+      - "REINFORCE 的方差问题": units/unit6/02-variance-problem.md
+      - "优势 Actor-Critic(A2C)": units/unit6/03-advantage-actor-critic.md
+      - "动手实践:用 Panda-Gym 机器人仿真训练 A2C 🤖": units/unit6/04-hands-on.md
+      - "测验": units/unit6/05-quiz.md
+      - "结语": units/unit6/06-conclusion.md
+      - "延伸阅读": units/unit6/07-additional-readings.md
+  - "Unit 7 · 多智能体与 AI vs AI 入门":
+      - "引言": units/unit7/01-introduction.md
+      - "多智能体强化学习(MARL)入门": units/unit7/02-introduction-to-marl.md
+      - "设计多智能体系统": units/unit7/03-multi-agent-setting.md
+      - "自博弈(Self-Play)": units/unit7/04-self-play.md
+      - "动手实践:训练足球队击败同学的队伍": units/unit7/05-hands-on.md
+      - "测验": units/unit7/06-quiz.md
+      - "结语": units/unit7/07-conclusion.md
+      - "延伸阅读": units/unit7/08-additional-readings.md
+  - "Unit 8 · Part 1 近端策略优化(PPO)":
+      - "引言": units/unit8/01-introduction.md
+      - "PPO 背后的直觉": units/unit8/02-intuition-behind-ppo.md
+      - "认识裁剪代理目标函数(Clipped Surrogate Objective)": units/unit8/03-clipped-surrogate-objective.md
+      - "可视化裁剪代理目标函数": units/unit8/04-visualize.md
+      - "实战:用 CleanRL 训练 PPO": units/unit8/05-hands-on-cleanrl.md
+      - "结语": units/unit8/06-conclusion.md
+      - "延伸阅读": units/unit8/07-additional-readings.md
+  - "Unit 8 · Part 2 用 Sample Factory 和 Doom 训练 PPO":
+      - "引言": units/unit8/08-introduction-sf.md
+      - "实战:用 Sample Factory 和 Doom 训练 PPO": units/unit8/09-hands-on-sf.md
+      - "结语": units/unit8/10-conclusion-sf.md
+  - "Bonus Unit 3 · 强化学习进阶专题":
+      - "引言": units/unitbonus3/01-introduction.md
+      - "基于模型的强化学习": units/unitbonus3/02-model-based.md
+      - "离线 vs 在线强化学习": units/unitbonus3/03-offline-online.md
+      - "强化学习的泛化": units/unitbonus3/04-generalisation.md
+      - "基于人类反馈的强化学习(RLHF)": units/unitbonus3/05-rlhf.md
+      - "Decision Transformer 与离线 RL": units/unitbonus3/06-decision-transformers.md
+      - "强化学习中的语言模型": units/unitbonus3/07-language-models.md
+      - "(自动)课程学习": units/unitbonus3/08-curriculum-learning.md
+      - "值得一试的有趣环境": units/unitbonus3/09-envs-to-try.md
+      - "Unreal Learning Agents 入门": units/unitbonus3/10-learning-agents.md
+      - "Godot RL 入门": units/unitbonus3/11-godotrl.md
+      - "学生项目": units/unitbonus3/12-student-works.md
+      - "强化学习文档简介": units/unitbonus3/13-rl-documentation.md
+  - "Bonus Unit 5 · 用 Godot RL Agents 进行模仿学习":
+      - "引言": units/unitbonus5/01-introduction.md
+      - "环境介绍": units/unitbonus5/02-the-environment.md
+      - "快速上手": units/unitbonus5/03-getting-started.md
+      - "训练我们的机器人": units/unitbonus5/04-train-our-robot.md
+      - "(可选)自定义环境": units/unitbonus5/05-customize-the-environment.md
+      - "结语": units/unitbonus5/06-conclusion.md
+  - "附录":
+      - "恭喜结课 🎉": appendix/01-congratulations.md
+      - "获取结业证书": appendix/02-certification.md
+      - "直播 1:课程工作机制、问答、与 Huggy 一起玩 🐶": appendix/03-live1.md
