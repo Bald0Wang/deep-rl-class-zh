@@ -164,6 +164,28 @@
   border-bottom-color: #fed7aa;
 }
 
+/* 覆盖 Chromium 新版 summary 默认蓝色标记与 Material 蓝底 */
+.md-typeset details > summary {
+  list-style: none;
+  background-color: rgba(249, 115, 22, 0.07);
+  color: #c2410c;
+  font-weight: 500;
+  transition: background-color 200ms ease;
+}
+
+.md-typeset details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset details > summary:hover {
+  background-color: rgba(249, 115, 22, 0.14);
+}
+
+[data-md-color-scheme="slate"] .md-typeset details > summary {
+  background-color: rgba(249, 115, 22, 0.12);
+  color: #fdba74;
+}
+
 .md-typeset summary:hover {
   color: #c2410c;
 }
