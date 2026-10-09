@@ -22,7 +22,6 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.path
-    - navigation.prune
     - navigation.sections
     - navigation.top
     - navigation.tracking
