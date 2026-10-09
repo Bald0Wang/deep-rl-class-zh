@@ -340,6 +340,9 @@
     position: relative;
     cursor: pointer;
     padding-right: 1.4em;
+    /* Material 桌面端默认给章节标题设了 pointer-events: none,
+       必须恢复,否则真实点击会穿透到父级、无法切换折叠 */
+    pointer-events: auto;
   }
 
   .md-sidebar--primary .md-nav__item--nested > label::after {
@@ -355,5 +358,14 @@
 
   .md-sidebar--primary .md-nav__item--nested > .md-nav__toggle:checked ~ label::after {
     transform: rotate(90deg);
+  }
+}
+
+/* Material 官方在桌面端用 (0,3,0) 特异性的规则禁用了章节标题的点击
+   (.md-nav__item--section > .md-nav__link:not(.md-nav__container)),
+   这里用更高特异性 (0,4,0) 恢复,保证折叠可点击。 */
+@media screen and (min-width: 1220px) {
+  .md-sidebar--primary .md-nav__item--section.md-nav__item--nested > label {
+    pointer-events: auto;
   }
 }
