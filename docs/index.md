@@ -11,7 +11,7 @@ hide:
 **deep-rl-class 的中文版本课程** — 基于 [Hugging Face Deep RL Course](https://huggingface.co/learn/deep-rl-course) 官方源码逐页翻译,9 个正式单元 + 3 个附加单元共 114 页全覆盖:从强化学习基础、Q-Learning、DQN,到策略梯度、PPO、多智能体与 RLHF。
 
 [ :material-rocket-launch: 开始学习 Unit 0](units/unit0/01-introduction.md){: .md-button .md-button--primary }
-[ :material-table-of-contents: 浏览课程目录](#课程单元){: .md-button }
+[ :material-table-of-contents: 浏览课程目录](#units){: .md-button }
 [ :material-github: GitHub 仓库](https://github.com/Bald0Wang/deep-rl-class-zh){: .md-button }
 
 </div>
@@ -30,7 +30,7 @@ hide:
 
 每个单元约需 1 周、每周 3–4 小时;左侧边栏点击章节标题可折叠/展开,右上角 🌓 切换深浅色。
 
-## 课程单元
+## 课程单元 {: #units }
 
 <div class="grid cards" markdown>
 

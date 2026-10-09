@@ -323,3 +323,37 @@
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* ---------- 桌面端侧边栏章节折叠 ----------
+   Material 桌面侧边栏默认全展开;这里复用其移动端 checkbox 折叠机制,
+   点击章节标题即可展开/收起,当前章节(构建时 checked)自动展开。 */
+@media screen and (min-width: 1220px) {
+  .md-sidebar--primary .md-nav__item--nested > .md-nav {
+    display: none;
+  }
+
+  .md-sidebar--primary .md-nav__item--nested > .md-nav__toggle:checked ~ .md-nav {
+    display: block;
+  }
+
+  .md-sidebar--primary .md-nav__item--nested > label {
+    position: relative;
+    cursor: pointer;
+    padding-right: 1.4em;
+  }
+
+  .md-sidebar--primary .md-nav__item--nested > label::after {
+    content: "▸";
+    position: absolute;
+    right: 0.1em;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 0.72rem;
+    opacity: 0.65;
+    transition: transform 200ms ease;
+  }
+
+  .md-sidebar--primary .md-nav__item--nested > .md-nav__toggle:checked ~ label::after {
+    transform: rotate(90deg);
+  }
+}
